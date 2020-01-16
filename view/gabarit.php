@@ -52,7 +52,13 @@
                         <li><a href="index.php?action=home">Home</a></li>
                         <li><a href="index.php?action=displaySnows">Snows</a></li>
                         <?php if (isset($_SESSION['username'])){?>
-                            <li><a href="index.php?action=disconnect"}
+                            <li><a href="/?action=disconnect>logout</a></li>"
+                            <?php }else{?>
+                            <li><a href="/?action=connect">login</a></li>
+                            <li><a href="/?action=newacc">create account</a></li>
+                            <?php }?>
+
+
                     </ul>
                 </div>
             </div>

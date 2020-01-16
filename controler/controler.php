@@ -8,4 +8,9 @@ function home()
     $news = getNews();
     require_once 'view/home.php';
 }
+function displaySnow()
+{
+    $snows = getSnows();
+    require_once "view/snowboards.php";
+}
 ?>
