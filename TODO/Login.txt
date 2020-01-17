@@ -1,0 +1,8 @@
+1. Bouton
+2. Formulaire, submit
+3. Test user/mdp - !hardcodé!		if($username == "Marwan")
+4. Sauver Session
+5. Tester la session 
+	--> connexion
+	--> déconnexion
+6.Traiter la déconnexion
