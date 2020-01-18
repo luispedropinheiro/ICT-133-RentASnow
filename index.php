@@ -21,6 +21,11 @@ switch ($choice)
         break;
 
     case "connect":
+        require_once "view/account.php";
+        break;
+
+    case "login":
+        login($username,$password);
         break;
 
     case "disconnect":
