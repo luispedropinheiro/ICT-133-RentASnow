@@ -1,12 +1,13 @@
 <?php
 session_start();
 
+var_dump($_SESSION);
 // Login token if exists
-if (isset($_Post["username"]) && isset($_Post["motdepasse"])){
-    $username = $_Post["username"];
-    $password = $_Post["motdepasse"];
+if (isset($_POST["username"]) && isset($_POST["password"])){
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 }
-
+var_dump($_POST["username"]);
 require "controler/controler.php";
 
 // Check Action

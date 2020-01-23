@@ -51,7 +51,7 @@
                         <!-- On commence par afficher les boutons qui s'afficheront, peu importe les événements-->
                         <li><a href="/?action=home">Home</a></li>
                         <li><a href="/?action=displaySnows">Snows</a></li>
-                        <?php if (isset($_SESSION['user'])) { ?>
+                        <?php if (isset($_SESSION['user'] )) { ?>
                             <li><a href="/?action=disconnect">logout</a></li>
                             <?php }else{?>
                             <li><a href="/?action=connect">login</a></li>

@@ -11,8 +11,8 @@ ob_start();
     <form action ="/action=login" method="post">
             <h1><strong>Connexion</strong></h1>
             <label>Username</label>
-            <input type="text" id="username" class="form-control" placeholder="Entrez votre nom d'utilisateur"/><br>
-            <input type="password" id="password" class="form-control" placeholder="Entrez votre mot de passe"/><br>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Entrez votre nom d'utilisateur"/><br>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Entrez votre mot de passe"/><br>
             <button type="submit" id="btnLogin" class="btn btn-primary">Connecter</button>
     </form>
 </div>

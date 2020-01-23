@@ -15,19 +15,19 @@ function displaySnow()
 }
 function login($username,$password)
 {
-    $_SESSION["Guess"] = false;
+    $_SESSION["Error"] = false;
 
-    $userslist = getUsers();
-    foreach ($userslist as $userslists)
+    $UserLog = getTheUser($username);
+    if ($UserLog != "")
     {
-        if ($username == $userslists['username'] && $password == $userslists["password"])
+        if ($UserLog["password"] == $password)
         {
-            $_SESSION["user"] = $username;
+            $_SESSION = $username;
         }
     }
     if (isset($_SESSION["user"]) == false)
     {
-        $_SESSION["Guess"] = true;
+        $_SESSION["Error"] = true;
     }
 
     require_once "view/home.php";
