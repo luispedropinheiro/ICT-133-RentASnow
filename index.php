@@ -30,7 +30,8 @@ switch ($choice)
         break;
 
     case "disconnect":
-        echo ("disco");
+        unset($_SESSION['user']);
+        home();
         break;
 
     case "newaccount":

@@ -20,16 +20,15 @@ function login($username,$password)
     $UserLog = getTheUser($username);
     if ($UserLog != "")
     {
-        if ($UserLog["password"] == $password)
+        if ($UserLog['password'] == $password)
         {
-            $_SESSION = $username;
+            $_SESSION['user'] = $username;
         }
     }
-    if (isset($_SESSION["user"]) == false)
+    if (isset($_SESSION['user']) == false)
     {
-        $_SESSION["Error"] = true;
+        $_SESSION['Error'] = true;
     }
-
     require_once "view/home.php";
 }
 ?>
