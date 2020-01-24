@@ -1,13 +1,16 @@
 <?php
 session_start();
 
-var_dump($_SESSION);
+// New account data
+    $username = $_POST['username'];
+    $fullname = $_POST['fullname'];
+    $birthdate = $_POST['birthdate'];
+    $password = $_POST['password'];
 // Login token if exists
 if (isset($_POST["username"]) && isset($_POST["password"])){
     $username = $_POST["username"];
     $password = $_POST["password"];
 }
-var_dump($_POST["username"]);
 require "controler/controler.php";
 
 // Check Action
@@ -30,12 +33,16 @@ switch ($choice)
         break;
 
     case "disconnect":
-        unset($_SESSION['user']);
+        unset($_SESSION['username']);
         home();
         break;
 
+    case "createaccount":
+        require_once "view/createaccount.php";
+        break;
     case "newaccount":
-        echo ("acc");
+        newaccount($username,$fullname,$birthdate,$password);
+        home();
         break;
     default:
         home();

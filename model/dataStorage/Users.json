@@ -1,16 +1,23 @@
 [
   {
     "username": "luispedrofp",
+    "fullname": "Lu\u00eds Pedro",
     "password": "123",
     "birthdate": "2002-09-09",
-    "wantnews": true,
     "date-inscription": "2020-01-02"
   },
   {
     "username": "simoncuany",
+    "full name": "Simon Cuany",
     "password": "123",
     "birthdate": "2002-06-31",
-    "wantnews": true,
     "date-inscription": "2020-01-23"
+  },
+  {
+    "username": "toto",
+    "fullname": "Toto bg",
+    "password": "123",
+    "birthdate": "2020-01-23",
+    "date-inscription": "2020-01-24"
   }
 ]

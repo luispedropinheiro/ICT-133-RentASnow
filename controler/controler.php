@@ -15,20 +15,28 @@ function displaySnow()
 }
 function login($username,$password)
 {
-    $_SESSION["Error"] = false;
 
     $UserLog = getTheUser($username);
     if ($UserLog != "")
     {
         if ($UserLog['password'] == $password)
         {
-            $_SESSION['user'] = $username;
+            $_SESSION['username'] = $UserLog["fullname"];
         }
     }
-    if (isset($_SESSION['user']) == false)
-    {
-        $_SESSION['Error'] = true;
-    }
     require_once "view/home.php";
+}
+function newaccount($username,$fullname,$birthdate,$password)
+{
+    $listUsers = getUsers();
+    $newUser = [
+        'username' => $username,
+        'fullname' => $fullname,
+        'password' => $password,
+        'birthdate' => $birthdate,
+        'date-inscription' => date("Y-m-d", time()),
+    ];
+    $listUsers[] = $newUser;
+    file_put_contents("model/dataStorage/Users.json", json_encode($listUsers));
 }
 ?>
